@@ -35,7 +35,7 @@ public class Circle {
     /**
      * @return the longest straight line that can be drawn within this circle
      */
-    /**public double longestLineWithin(){
+    public double longestLineWithin(){
         double diameter = radius *2;
         return diameter;
         //throw new RuntimeException("Not implemented yet");
