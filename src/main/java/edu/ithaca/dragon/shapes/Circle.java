@@ -1,15 +1,16 @@
 package edu.ithaca.dragon.shapes;
 
 public class Circle {
-    public float radius;{
-        if (radius <= 0) 
-           throw new IllegalArgumentException("Radius must be greater than 0.");
-    }
+    private float radius;
+        
     /**
      * @throws IllegalArgumentException if radius is not a positive number
      */
     public Circle(float radius){
         this.radius = radius;
+        if (radius <= 0) 
+            throw new IllegalArgumentException("Radius must be greater than 0.");
+    
     }
 
     /**
@@ -35,9 +36,13 @@ public class Circle {
     /**
      * @return the longest straight line that can be drawn within this circle
      */
-    public double longestLineWithin(){
-        double diameter = radius *2;
+    public float longestLineWithin(){
+        float diameter = radius *2;
         return diameter;
         //throw new RuntimeException("Not implemented yet");
+    }
+    public float getradius(){
+        float getradius = radius;
+        return getradius;
     }
 }

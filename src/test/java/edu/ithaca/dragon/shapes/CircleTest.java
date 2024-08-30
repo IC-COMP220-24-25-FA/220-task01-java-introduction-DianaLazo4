@@ -21,14 +21,14 @@ public class CircleTest {
     public void calcAreaTest(){
         Circle myCircle = new Circle(1);
         //3rd parameter says how far off it can be since it is a double
-        assertEquals(3.1415, myCircle.calcArea(myCircle.radius), 0.0001);
+        assertEquals(3.1415, myCircle.calcArea(myCircle.getradius()), 0.0001);
         
         myCircle = new Circle((float) 5.5);
-        assertEquals(95.0304, myCircle.calcArea(myCircle.radius), 0.0001);
+        assertEquals(95.0304, myCircle.calcArea(myCircle.getradius()), 0.0001);
         //it was said before set to equal 95.0331, but using 3.1415 as pie it equals 95.0304
 
         myCircle = new Circle((float)0.001);
-        assertEquals(0.00000314159, myCircle.calcArea(myCircle.radius), 0.0000000001);
+        assertEquals(0.00000314159, myCircle.calcArea(myCircle.getradius()), 0.0000000001);
     }
 
     @Test
