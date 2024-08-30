@@ -30,6 +30,6 @@ public class RectangleTest {
 
     @Test
     public void TestConstructorError(){
-        assertThrows(IllegalArgumentException.class, () -> new Circle());
+        assertThrows(IllegalArgumentException.class, () -> new Rectangle(0,0));
     }//add error how to make illigal argument
 }
