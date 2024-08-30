@@ -7,15 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-public class RectangleTest {
-    
-    @Test
-    public void sampleTestThatPasses(){
-        System.out.println("hello world");
-        assertEquals("This test should pass", "This test should pass");
-        assertTrue(8>5);
-        assertFalse(8<5);
-    }
+public class RectangleTestfail {
     @Test
     public void calcAreaTest(){
         Rectangle myRectangle = new Rectangle(2,1);
@@ -30,6 +22,6 @@ public class RectangleTest {
 
     @Test
     public void TestConstructorError(){
-        assertThrows(IllegalArgumentException.class, () -> new Circle());
+        assertThrows(IllegalArgumentException.class, () -> new Circle(0));
     }//add error how to make illigal argument
 }

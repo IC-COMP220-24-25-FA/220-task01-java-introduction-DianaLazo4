@@ -28,8 +28,7 @@ public class Circle {
      * @post doubles the size of this circle
      */
     public void doubleSize(){
-        float nradius = radius *2;
-        radius = nradius;
+        this.radius = radius *2;
         //throw new RuntimeException("Not implemented yet");
     }
 

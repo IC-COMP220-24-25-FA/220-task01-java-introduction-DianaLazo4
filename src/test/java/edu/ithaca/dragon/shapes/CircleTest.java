@@ -20,7 +20,6 @@ public class CircleTest {
     @Test
     public void calcAreaTest(){
         Circle myCircle = new Circle(1);
-        //3rd parameter says how far off it can be since it is a double
         assertEquals(3.1415, myCircle.calcArea(myCircle.getradius()), 0.0001);
         
         myCircle = new Circle((float) 5.5);
