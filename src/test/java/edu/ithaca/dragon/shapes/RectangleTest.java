@@ -27,6 +27,17 @@ public class RectangleTest {
         myRectangle = new Rectangle(6,2);
         assertEquals(12, myRectangle.calcArea(myRectangle.getlength(),myRectangle.getwidth()), 0.0001);
     }
+    @Test
+    public void doubleSize(){
+        Rectangle myRectangle = new Rectangle(1,2);
+        myRectangle.doubleSize();
+        assertEquals(8, myRectangle.calcArea(myRectangle.getlength(),myRectangle.getwidth()), 0.0001);
+    }
+    @Test
+    public void longestLineWithin(){
+        Rectangle mRectangle = new Rectangle(1,2);
+        assertEquals(2.2361, mRectangle.longestLineWithin(), 0.0001);
+    }
 
     @Test
     public void TestConstructorError(){
