@@ -2,8 +2,8 @@ package edu.ithaca.dragon.shapes;
 
 public class Circle {
     public float radius;{
-        //if (radius <= 0) 
-           // throw new IllegalArgumentException("Radius must be greater than 0.");
+        if (radius <= 0) 
+           throw new IllegalArgumentException("Radius must be greater than 0.");
     }
     /**
      * @throws IllegalArgumentException if radius is not a positive number
