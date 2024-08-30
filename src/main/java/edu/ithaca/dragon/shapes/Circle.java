@@ -1,7 +1,7 @@
 package edu.ithaca.dragon.shapes;
 
 public class Circle {
-    private double radius;
+    public double radius;
 
     /**
      * @throws IllegalArgumentException if radius is not a positive number
@@ -13,21 +13,29 @@ public class Circle {
     /**
      * @return the area of this circle
      */
-    public double calcArea(){
-        throw new RuntimeException("Not implemented yet");
+    public double calcArea(double radius){
+        float pie= (float) 3.14;
+        double area = radius*radius*pie;
+        return area;
+
+        //throw new RuntimeException("Not implemented yet");
     }
 
     /**
      * @post doubles the size of this circle
      */
     public void doubleSize(){
-        throw new RuntimeException("Not implemented yet");
+        double nradius = radius *2;
+        radius = nradius;
+        //throw new RuntimeException("Not implemented yet");
     }
 
     /**
      * @return the longest straight line that can be drawn within this circle
      */
     public double longestLineWithin(){
-        throw new RuntimeException("Not implemented yet");
+        double diameter = radius *2;
+        return diameter;
+        //throw new RuntimeException("Not implemented yet");
     }
 }
