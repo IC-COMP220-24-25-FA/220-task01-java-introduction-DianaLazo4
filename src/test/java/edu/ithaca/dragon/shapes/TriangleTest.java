@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-public class TriangleTest {
+public class TriangleTest{
     
     @Test
     public void sampleTestThatPasses(){
@@ -18,20 +18,20 @@ public class TriangleTest {
     }
     @Test
     public void calcAreaTest(){
-        Triangle mTriangle = new Triangle(2,1);
-        assertEquals(1.0, mTriangle.calcArea(mTriangle.getbase(),mTriangle.getheight()), 0.0001);
+        Triangle myTriangle = new Triangle(2,1);
+        assertEquals(1, myTriangle.calcArea(myTriangle.getbase(),myTriangle.getheight()), 0.0001);
         
-        mTriangle = new Triangle(3,2);
-        assertEquals(3, mTriangle.calcArea(mTriangle.getbase(),mTriangle.getheight()), 0.0001);
-        
-        mTriangle = new Triangle(4,5);
-        assertEquals(10, mTriangle.calcArea(mTriangle.getbase(),mTriangle.getheight()), 0.0001);
+        myTriangle = new Triangle(3,2);
+        assertEquals(3, myTriangle.calcArea(myTriangle.getbase(),myTriangle.getheight()), 0.0001);
+
+        myTriangle = new Triangle(6,2);
+        assertEquals(6, myTriangle.calcArea(myTriangle.getbase(),myTriangle.getheight()), 0.0001);
     }
     @Test
     public void doubleSize(){
         Triangle myTriangle = new Triangle(2,1);
         myTriangle.doubleSize();
-        assertEquals(1, myTriangle.calcArea(myTriangle.getbase(),myTriangle.getheight()), 0.0001);
+        assertEquals(4, myTriangle.calcArea(myTriangle.getbase(),myTriangle.getheight()), 0.0001);
     }
     @Test
     public void longestLineWithin(){
