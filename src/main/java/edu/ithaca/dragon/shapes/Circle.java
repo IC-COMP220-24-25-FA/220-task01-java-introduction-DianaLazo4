@@ -13,6 +13,12 @@ public class Circle {
     
     }
 
+    public String toString(){
+        return("Circle:" + " - Radius: " + this.getradius());
+
+    }
+
+
     /**
      * @return the area of this circle
      */

@@ -15,6 +15,10 @@ public class Triangle {
 
     }
 
+    public String toString(){
+        return("Triangle:" + " - Base: " + this.getbase() + " - Width" + this.getheight());
+
+    }
     public float calcArea(float base, float height){
         float area = base * height * 0.5f;
         return area;

@@ -15,6 +15,11 @@ public class Rectangle {
 
     }
 
+     public String toString(){
+        return("Rectangle:" + " - Lenght: " + this.getlength() + " - Width" + this.getwidth());
+
+    }
+
     public float calcArea(float length, float width){
         float area = length * width;
         return area;
