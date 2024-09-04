@@ -1,8 +1,12 @@
 package edu.ithaca.dragon.practice;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.Arrays;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
@@ -25,7 +29,48 @@ public class FunctionPracticeTest {
 
     @Test
     public void calcSalePriceTest(){
-        fail("Not implemented yet");
+        assertEquals(1.89, FunctionPractice.calcSalePrice(2,10, 5),0.01);
+        assertEquals(4.73, FunctionPractice.calcSalePrice(5,10, 5),0.01);
+
     }
-    
+    @Test
+    public void isGoodDogTest(){
+        assertTrue(FunctionPractice.isGoodDog(1, 10, true));
+        assertFalse(FunctionPractice.isGoodDog(5, 1, true));
+        assertFalse(FunctionPractice.isGoodDog(-1, 10, true));
+        assertFalse(FunctionPractice.isGoodDog(1, 10, false));
+
+    }
+    @Test
+    public void findFirstLargest(){
+        List<Integer> numbers = Arrays.asList(1, 10, 5, 10, 9);
+        assertEquals(1, FunctionPractice.findFirstLargest(numbers));
+        numbers = Arrays.asList(1, 3, 5, 7, 9);
+        assertEquals(4, FunctionPractice.findFirstLargest(numbers));
+        List<Integer> num = Arrays.asList();
+        assertEquals(-1, FunctionPractice.findFirstLargest(num));
+
+    }
+    @Test
+    public void findLastLargest(){
+        List<Integer> numbers = Arrays.asList(1, 10, 5, 10, 9);
+        assertEquals(3, FunctionPractice.findLastLargest(numbers));
+        numbers = Arrays.asList(1, 3, 5, 7, 9);
+        assertEquals(4, FunctionPractice.findLastLargest(numbers));
+        List<Integer> num = Arrays.asList();
+        assertEquals(-1, FunctionPractice.findLastLargest(num));
+
+    }
+    @Test
+    public void findFirstMostOccurencesOfLetter(){
+        List<String> words = Arrays.asList("pizza", "pizzza","zebra");
+        assertEquals("pizzza", FunctionPractice.findFirstMostOccurencesOfLetter(words,'z'));
+        words = Arrays.asList("pizzzza", "pizzza","zebra");
+        assertEquals("pizzzza", FunctionPractice.findFirstMostOccurencesOfLetter(words,'z'));
+        words = Arrays.asList("pizza", "pizzza","pizzzza");
+        assertEquals("pizzzza", FunctionPractice.findFirstMostOccurencesOfLetter(words,'z'));
+        words = Arrays.asList();
+        assertEquals("-1", FunctionPractice.findFirstMostOccurencesOfLetter(words,'z'));
+
+    }
 }
