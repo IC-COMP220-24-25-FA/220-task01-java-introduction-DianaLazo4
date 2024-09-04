@@ -9,13 +9,20 @@ public class FunctionPractice {
      * @throws IllegalArgumentException if any of the numbers is negative
      */
     public static int largestOfThree(int first, int second, int third){
+         if (first < 0 || second < 0 || third < 0) {
+        throw new IllegalArgumentException("All numbers must be non-negative.");
+        }
+
         int high = 0;
-        if (first > high);
+        if (first > high){
             high = first;
-        if (second > high);
+        }
+        if (second > high){
             high = second;
-        if (third > high);
+        }
+        if (third > high){
             high = third;
+        }
 
         return high;
         
@@ -67,7 +74,7 @@ public class FunctionPractice {
             }
         }
     
-        return largestIndex;  // Return the index of the first occurrence of the largest number
+        return largestIndex; 
     }
 
     /**
@@ -75,7 +82,22 @@ public class FunctionPractice {
      * If the largest number occurs more than once, return the index of the last occurence.
      */
     public static int findLastLargest(List<Integer> numbers){
-        throw new RuntimeException("Not Implemented");
+        if (numbers.isEmpty()) {
+            return -1; 
+        }
+    
+        int largestIndex = 0;  
+        int largestValue = numbers.get(0);  // Initialize the largest value with the first element
+    
+        for (int i = 1; i < numbers.size(); i++) {
+            int currentNumber = numbers.get(i);
+            if (currentNumber >= largestValue) { //Now => so the last occurence index is returned
+                largestValue = currentNumber;  // Update the largest value
+                largestIndex = i;  // Update the index of the largest value
+            }
+        }
+    
+        return largestIndex; 
     }
 
     /**
