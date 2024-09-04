@@ -7,6 +7,15 @@ import java.util.Scanner;
 public class ShapeMain {
     
     public static void main(String[] args){
+        List<InterfaceShapes> shapelist = new ArrayList<>(10);
+        for (int i = 0; i < shapelist.size(); i++){
+            System.out.println(shapelist.get(i));
+        }
+        for (int i = 0; i < shapelist.size(); i++){
+            shapelist.
+            System.out.println(shapelist.get(i));
+        }
+        
         //Make a list of 5 randomly-sized rectangles and print their area and the largest line that can be drawn through them
         //Allow the user to choose one, double the size of that one, and print them all again
         //Use a loop to repeat the process 5 times
