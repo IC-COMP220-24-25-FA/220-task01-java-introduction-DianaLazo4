@@ -1,5 +1,6 @@
 package edu.ithaca.dragon.shapes;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
@@ -7,14 +8,42 @@ import java.util.Scanner;
 public class ShapeMain {
     
     public static void main(String[] args){
-        List<InterfaceShapes> shapelist = new ArrayList<>(10);
-        for (int i = 0; i < shapelist.size(); i++){
+        List<InterfaceShapes> shapelist = new ArrayList<>();
+        List<String> possib = Arrays.asList("a","b","c");
+
+         for (int i = 0; i < 10; i++){
+            String possibletter = possib.get(new Random().nextInt(possib.size()));
+            if (possibletter == "a"){
+                Random random = new Random();
+                float randomFloatLenght = 1 + random.nextFloat() * 9;
+                float randomFloatWidth = 1 + random.nextFloat() * 9; 
+                Rectangle rectangle = new Rectangle(randomFloatLenght, randomFloatWidth);
+                shapelist.add(rectangle);
+                
+            }
+            if (possibletter == "b"){
+                Random random = new Random();
+                float randomFloatRadius = 1 + random.nextFloat() * 9;
+                Circle circle = new Circle(randomFloatRadius);
+                shapelist.add(circle);
+            }
+            if (possibletter == "c"){
+                Random random = new Random();
+                float randomFloatBase = 1 + random.nextFloat() * 9;
+                float randomFloatHeight = 1 + random.nextFloat() * 9; 
+                Triangle triangle = new Triangle(randomFloatBase,randomFloatHeight);
+                shapelist.add(triangle);
+            }
+         }
+
+        //System.out.println(name);
+        //for (int i = 0; i < shapelist.size(); i++){
             System.out.println(shapelist.get(i));
-        }
-        for (int i = 0; i < shapelist.size(); i++){
-            shapelist.
-            System.out.println(shapelist.get(i));
-        }
+        //}
+        //for (int i = 0; i < shapelist.size(); i++){
+            //shapelist.
+            //System.out.println(shapelist.get(i));
+        //}
         
         //Make a list of 5 randomly-sized rectangles and print their area and the largest line that can be drawn through them
         //Allow the user to choose one, double the size of that one, and print them all again
