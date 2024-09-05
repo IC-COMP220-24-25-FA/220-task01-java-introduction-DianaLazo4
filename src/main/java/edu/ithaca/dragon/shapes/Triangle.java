@@ -1,6 +1,6 @@
 package edu.ithaca.dragon.shapes;
 
-public class Triangle implements InterfaceShapes{
+public class Triangle implements InterfaceShapes {
     private float base;
     private float height;
 
@@ -40,5 +40,11 @@ public class Triangle implements InterfaceShapes{
     public float getheight(){
         float getheight = height;
         return getheight;
+    }
+
+    @Override
+    public float calcArea() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calcArea'");
     }
 }

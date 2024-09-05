@@ -1,6 +1,6 @@
 package edu.ithaca.dragon.shapes;
 
-public class Circle implements InterfaceShapes{
+public class Circle implements InterfaceShapes {
     private float radius;
         
     /**
@@ -49,5 +49,11 @@ public class Circle implements InterfaceShapes{
     public float getradius(){
         float getradius = radius;
         return getradius;
+    }
+
+    @Override
+    public float calcArea() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calcArea'");
     }
 }

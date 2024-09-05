@@ -11,7 +11,7 @@ public class ShapeMain {
         List<InterfaceShapes> shapelist = new ArrayList<>();
         List<String> possib = Arrays.asList("a","b","c");
 
-         for (int i = 0; i < 10; i++){
+         for (int r = 0; r < 10; r++){
             String possibletter = possib.get(new Random().nextInt(possib.size()));
             if (possibletter == "a"){
                 Random random = new Random();
@@ -34,11 +34,19 @@ public class ShapeMain {
                 Triangle triangle = new Triangle(randomFloatBase,randomFloatHeight);
                 shapelist.add(triangle);
             }
+
          }
 
-        //System.out.println(name);
-        //for (int i = 0; i < shapelist.size(); i++){
-            System.out.println(shapelist.get(i));
+        System.out.println("10 RANDOM SHAPES");
+        for (int e = 0; e < shapelist.size(); e++){
+            System.out.println(shapelist.get(e).toString());
+            
+        }
+        System.out.println("10 RANDOM SHAPES DOUBLED");
+        for (int p = 0; p < shapelist.size(); p++) {
+            shapelist.get(p).doubleSize();
+            System.err.println(shapelist.get(p).toString());
+        }
         //}
         //for (int i = 0; i < shapelist.size(); i++){
             //shapelist.
@@ -113,3 +121,4 @@ public class ShapeMain {
 
 
 }
+

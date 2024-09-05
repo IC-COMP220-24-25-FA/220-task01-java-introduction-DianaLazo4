@@ -1,6 +1,6 @@
 package edu.ithaca.dragon.shapes;
 
-public class Rectangle implements InterfaceShapes{
+public class Rectangle implements InterfaceShapes {
     private float length;
     private float width;
 
@@ -40,5 +40,11 @@ public class Rectangle implements InterfaceShapes{
     public float getwidth(){
         float getwidth = width;
         return getwidth;
+    }
+
+    @Override
+    public float calcArea() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calcArea'");
     }
 }
