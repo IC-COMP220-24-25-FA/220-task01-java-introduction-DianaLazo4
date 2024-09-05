@@ -1,10 +1,10 @@
 package edu.ithaca.dragon.shapes;
 
-public class Rectangle {
-    private double length;
-    private double width;
+public class Rectangle implements InterfaceShapes {
+    private float length;
+    private float width;
 
-    public Rectangle(double length, double width){
+    public Rectangle(float length, float width){
         this.length = length;
         this.width = width;
 
@@ -15,16 +15,36 @@ public class Rectangle {
 
     }
 
-    public double calcArea(){
-       throw new RuntimeException("Not implemented yet");
+     public String toString(){
+        return("Rectangle:" + " - Lenght: " + this.getlength() + " - Width" + this.getwidth());
+
+    }
+
+    public float calcArea(float length, float width){
+        float area = length * width;
+        return area;
     }
 
     public void doubleSize(){
-        throw new RuntimeException("Not implemented yet");
+        this.length = length *2;
+        this.width = width *2;
     }
 
-    public double longestLineWithin(){
-        throw new RuntimeException("Not implemented yet");
+    public float longestLineWithin(){
+        return (float) Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2));
     }
-    
+    public float getlength(){
+        float getlength = length;
+        return getlength;
+    }
+    public float getwidth(){
+        float getwidth = width;
+        return getwidth;
+    }
+
+    @Override
+    public float calcArea() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calcArea'");
+    }
 }

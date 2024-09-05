@@ -1,6 +1,6 @@
 package edu.ithaca.dragon.shapes;
 
-public class Circle {
+public class Circle implements InterfaceShapes {
     private float radius;
         
     /**
@@ -12,6 +12,12 @@ public class Circle {
             throw new IllegalArgumentException("Radius must be greater than 0.");
     
     }
+
+    public String toString(){
+        return("Circle:" + " - Radius: " + this.getradius());
+
+    }
+
 
     /**
      * @return the area of this circle
@@ -28,8 +34,7 @@ public class Circle {
      * @post doubles the size of this circle
      */
     public void doubleSize(){
-        float nradius = radius *2;
-        radius = nradius;
+        this.radius = radius *2;
         //throw new RuntimeException("Not implemented yet");
     }
 
@@ -44,5 +49,11 @@ public class Circle {
     public float getradius(){
         float getradius = radius;
         return getradius;
+    }
+
+    @Override
+    public float calcArea() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calcArea'");
     }
 }

@@ -20,7 +20,6 @@ public class CircleTest {
     @Test
     public void calcAreaTest(){
         Circle myCircle = new Circle(1);
-        //3rd parameter says how far off it can be since it is a double
         assertEquals(3.1415, myCircle.calcArea(myCircle.getradius()), 0.0001);
         
         myCircle = new Circle((float) 5.5);
@@ -29,6 +28,17 @@ public class CircleTest {
 
         myCircle = new Circle((float)0.001);
         assertEquals(0.00000314159, myCircle.calcArea(myCircle.getradius()), 0.0000000001);
+    }
+    @Test
+    public void doubleSize(){
+        Circle myCircle = new Circle(1);
+        myCircle.doubleSize();
+        assertEquals(12.566, myCircle.calcArea(myCircle.getradius()), 0.0001);
+    }
+    @Test
+    public void longestLineWithin(){
+        Circle myCircle = new Circle(1);
+        assertEquals(2, myCircle.longestLineWithin(), 0.0001);
     }
 
     @Test
